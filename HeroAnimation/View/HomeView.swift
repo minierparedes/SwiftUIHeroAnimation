@@ -15,10 +15,10 @@ struct HomeView: View {
     @Namespace var namespace
     
     var body: some View {
-        VStack {
+        ZStack {
              ScrollView(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/, showsIndicators: false) {
                 HStack {
-                    Text("hello World")
+                    Text("HearthStone")
                         .font(.system(size: 35, weight: .bold))
                         .foregroundColor(.black)
                     
@@ -52,7 +52,7 @@ struct HomeView: View {
                                 .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                         }
                     }
-                }.padding(.horizontal)
+                }.padding([.horizontal, .bottom])
                 
             }
              .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
@@ -64,7 +64,8 @@ struct HomeView: View {
                             .resizable()
                             .frame(width: 190, height: 300)
                             .matchedGeometryEffect(id: selected.id, in: namespace)
-                       
+                            .padding(.top, 50)
+                            
                         if loadView {
                             HStack {
                                 Spacer()
@@ -100,11 +101,11 @@ struct HomeView: View {
                             Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.")
                                 .multilineTextAlignment(.leading)
                                 .padding(.top)
-                                .padding(.horizontalç)
+                                .padding(.horizontal)
                         }
                     }
                 }
-                .background(Color.white)
+                .background(Color.white.edgesIgnoringSafeArea(.all))
             }
             
         }
