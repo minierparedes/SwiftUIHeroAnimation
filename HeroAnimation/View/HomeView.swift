@@ -37,7 +37,8 @@ struct HomeView: View {
                         VStack(alignment: .center, spacing: 10) {
                             Image(card.img)
                                 .resizable()
-                                .frame(width: 95, height: 160)
+                                .frame(width: 115, height: 160)
+                                .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/, radius: 6, x: 3, y: 5)
                                 .onTapGesture {
                                     withAnimation(.spring()) {
                                         show.toggle()
@@ -62,9 +63,10 @@ struct HomeView: View {
                     ZStack(alignment: Alignment(horizontal: .center, vertical: .top)) {
                         Image(selected.img)
                             .resizable()
-                            .frame(width: 190, height: 300)
+                            .frame(width: 210, height: 300)
                             .matchedGeometryEffect(id: selected.id, in: namespace)
                             .padding(.top, 50)
+                            .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/, radius: 8, x: 3, y: 5)
                             
                         if loadView {
                             HStack {
@@ -91,9 +93,11 @@ struct HomeView: View {
                         VStack(alignment: .center) {
                             HStack {
                                 Text(selected.name)
+                                    
                                     .font(hsFonts(Config.H2))
                                     .fontWeight(.bold)
                                     .foregroundColor(.yellow)
+                                    
                             }
                             .padding(.top)
                             .padding(.horizontal)
@@ -137,6 +141,33 @@ struct HomeView: View {
                                 }
                                 HStack {
                                     Text("Class:")
+                                        .font(.headline)
+                                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                                        .foregroundColor(.yellow)
+                                    Text(selected.classType)
+                                        .font(.subheadline)
+                                        .foregroundColor(.white)
+                                }
+                                HStack {
+                                    Text("Cost to Craft:")
+                                        .font(.headline)
+                                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                                        .foregroundColor(.yellow)
+                                    Text(selected.classType)
+                                        .font(.subheadline)
+                                        .foregroundColor(.white)
+                                }
+                                HStack {
+                                    Text("Artist:")
+                                        .font(.headline)
+                                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                                        .foregroundColor(.yellow)
+                                    Text(selected.classType)
+                                        .font(.subheadline)
+                                        .foregroundColor(.white)
+                                }
+                                HStack {
+                                    Text("Collectible:")
                                         .font(.headline)
                                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                                         .foregroundColor(.yellow)
