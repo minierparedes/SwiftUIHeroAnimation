@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     var columns = Array(repeating: GridItem(.flexible(), spacing: 15), count: 2)
-    @State var selected: HSCardModel = [0]
+    @State var selected: HSCardModel = hsCardData[0]
     @State var show: Bool = false
     @Namespace var namespace
     var body: some View {
@@ -51,6 +51,45 @@ struct HomeView: View {
                 
             }
              .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
+            
+            if show {
+                VStack {
+                    ZStack(alignment: Alignment(horizontal: .center, vertical: .top)) {
+                        Image(selected.img)
+                            .resizable()
+                            .frame(width: 190, height: 300)
+                            .matchedGeometryEffect(id: selected.id, in: namespace)
+                        HStack {
+                            Spacer()
+                            Button(action: {
+                                withAnimation(.spring()) {
+                                    show.toggle()
+                                }
+                            }, label: {
+                                Image(systemName: "xmark")
+                                    .foregroundColor(.white)
+                                    .padding()
+                                    .background(Color.black.opacity(0.5))
+                                    .clipShape(Circle())
+                            })
+                            
+                            
+//                            Button {} label: {
+//                                Image(systemName: "suit.hear.fill")
+//                                    .foregroundColor(.red)
+//                                    .padding()
+//                                    .background(Color.white)
+//                            }
+                        }
+                        .padding(.top, 15)
+                        .padding(.horizontal)
+                    }
+                    
+                    Spacer()
+                }
+                .background(Color.white)
+            }
+            
         }
         .background(Color.white.edgesIgnoringSafeArea(.all))
     }
