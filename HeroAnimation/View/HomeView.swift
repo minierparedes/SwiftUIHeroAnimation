@@ -48,7 +48,7 @@ struct HomeView: View {
                                     }
                                 }
                                 .matchedGeometryEffect(id: card.id, in: namespace)
-                            Text(card.title)
+                            Text(card.name)
                                 .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                         }
                     }
@@ -88,15 +88,27 @@ struct HomeView: View {
                     }
                     
                     ScrollView(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/, showsIndicators: false) {
-                        VStack {
+                        VStack(alignment: .center) {
                             HStack {
-                                Text(selected.title)
-                                    .font(.title)
+                                Text(selected.name)
+                                    .font(hsFonts(Config.H3))
                                     .fontWeight(.bold)
                                     .foregroundColor(.yellow)
                             }
                             .padding(.top)
                             .padding(.horizontal)
+                            
+                            
+                            Text("\"\(selected.flavor)\"")
+                                .font(.subheadline).italic()
+                                .foregroundColor(.gray)
+                                .padding(.bottom, 1)
+                            Text(selected.text)
+                                .font(.title3)
+                                .foregroundColor(.white)
+                            Text(selected.text)
+                                .font(.title3)
+                                .foregroundColor(.white)
                             
                             Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.")
                                 .multilineTextAlignment(.leading)

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D28ED30261DDEF50051BD14 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D28ED2F261DDEF50051BD14 /* Config.swift */; };
+		8D28ED33261DE24D0051BD14 /* Aclonica-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D28ED32261DE1FE0051BD14 /* Aclonica-Regular.ttf */; };
 		8DD07C94261D81B0008761F7 /* HeroAnimationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD07C93261D81B0008761F7 /* HeroAnimationApp.swift */; };
 		8DD07C96261D81B0008761F7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD07C95261D81B0008761F7 /* ContentView.swift */; };
 		8DD07C98261D81B2008761F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DD07C97261D81B2008761F7 /* Assets.xcassets */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D28ED2F261DDEF50051BD14 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		8D28ED32261DE1FE0051BD14 /* Aclonica-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aclonica-Regular.ttf"; sourceTree = "<group>"; };
 		8DD07C90261D81B0008761F7 /* HeroAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeroAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD07C93261D81B0008761F7 /* HeroAnimationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroAnimationApp.swift; sourceTree = "<group>"; };
 		8DD07C95261D81B0008761F7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -37,6 +41,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D28ED2C261DDC9D0051BD14 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D28ED32261DE1FE0051BD14 /* Aclonica-Regular.ttf */,
+				8D28ED2F261DDEF50051BD14 /* Config.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		8DD07C87261D81B0008761F7 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +69,7 @@
 		8DD07C92261D81B0008761F7 /* HeroAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				8D28ED2C261DDC9D0051BD14 /* Resources */,
 				8DD07CA3261D81C9008761F7 /* Model */,
 				8DD07CA4261D81D1008761F7 /* ViewModel */,
 				8DD07CA5261D81DC008761F7 /* View */,
@@ -156,6 +170,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D28ED33261DE24D0051BD14 /* Aclonica-Regular.ttf in Resources */,
 				8DD07C9B261D81B2008761F7 /* Preview Assets.xcassets in Resources */,
 				8DD07C98261D81B2008761F7 /* Assets.xcassets in Resources */,
 			);
@@ -170,6 +185,7 @@
 			files = (
 				8DD07C96261D81B0008761F7 /* ContentView.swift in Sources */,
 				8DD07CAB261D82DC008761F7 /* HomeView.swift in Sources */,
+				8D28ED30261DDEF50051BD14 /* Config.swift in Sources */,
 				8DD07CA7261D824D008761F7 /* HSCardsModel.swift in Sources */,
 				8DD07C94261D81B0008761F7 /* HeroAnimationApp.swift in Sources */,
 			);

@@ -46,5 +46,10 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>LHF_Uncial_Caps.ttf</string>
+		<string>Aclonica-Regular.ttf</string>
+	</array>
 </dict>
 </plist>

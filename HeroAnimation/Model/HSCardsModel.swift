@@ -10,16 +10,22 @@ import Foundation
 
 struct HSCardModel: Identifiable {
     var id: Int
-    var title: String
+    var name: String
     var img: String
+    var text: String
+    var flavor: String
+    var type: String
+    var rarity: String
+    var classType: String
+    var set: String
 }
 
 
 var hsCardData = [
-    HSCardModel(id: 0, title: "Ilidari Studies", img: "hsCard1"),
-    HSCardModel(id: 1, title: "NetherWalker", img: "hsCard2"),
-    HSCardModel(id: 2, title: "Demon Companion", img: "hsCard3"),
-    HSCardModel(id: 3, title: "Sigil of Silence", img: "hsCard4"),
-    HSCardModel(id: 4, title: "Redeemed Pariah", img: "hsCard5"),
-    HSCardModel(id: 5, title: "Kor'vahs BloodThorn", img: "hsCard6")
+    HSCardModel(id: 0, name: "Ilidari Studies", img: "hsCard1", text: "Discover an Outcast card. Your next one costs (1) less.", flavor: "Don't read texts and drive."),
+    HSCardModel(id: 1, name: "NetherWalker", img: "hsCard2", text: "Battlecry: Discover a Demon.", flavor: "You got to Nethercrawl before you can Netherwalk."),
+    HSCardModel(id: 2, name: "Demon Companion", img: "hsCard3", text: "Summon a random Demon Companion.", flavor: "Owning a pet can be real hell at times."),
+    HSCardModel(id: 3, name: "Sigil of Silence", img: "hsCard4", text: "At the start of your next turn, Silence all enemy minions.", flavor: "A little heard-of spell."),
+    HSCardModel(id: 4, name: "Redeemed Pariah", img: "hsCard5", text: "After you play an Outcast card, gain +1/+1.", flavor: "Look at this stick. Look at it!"),
+    HSCardModel(id: 5, name: "Kor'vas BloodThorn", img: "hsCard6", text: "Charge, Lifesteal After you play a card with Outcast, return this to your hand.", flavor: "Illidan taught her that demon hunters should sacrifice EVERYTHING… but she still brought Lifesteal just in case.")
 ]
