@@ -105,7 +105,7 @@ struct HomeView: View {
                         }
                     }
                 }
-                .background(Color.white.edgesIgnoringSafeArea(.all))
+                .background(LinearGradient(gradient: Gradient(colors: [Color.black, Color.gray]), startPoint: .top, endPoint: .bottom).edgesIgnoringSafeArea(.all))
             }
             
         }
