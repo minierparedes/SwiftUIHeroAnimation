@@ -11,6 +11,8 @@
 		8DD07C96261D81B0008761F7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD07C95261D81B0008761F7 /* ContentView.swift */; };
 		8DD07C98261D81B2008761F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DD07C97261D81B2008761F7 /* Assets.xcassets */; };
 		8DD07C9B261D81B2008761F7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DD07C9A261D81B2008761F7 /* Preview Assets.xcassets */; };
+		8DD07CA7261D824D008761F7 /* HSCardsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD07CA6261D824D008761F7 /* HSCardsModel.swift */; };
+		8DD07CAB261D82DC008761F7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD07CAA261D82DC008761F7 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		8DD07C97261D81B2008761F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8DD07C9A261D81B2008761F7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8DD07C9C261D81B2008761F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DD07CA6261D824D008761F7 /* HSCardsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSCardsModel.swift; sourceTree = "<group>"; };
+		8DD07CAA261D82DC008761F7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +56,10 @@
 		8DD07C92261D81B0008761F7 /* HeroAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				8DD07CA3261D81C9008761F7 /* Model */,
+				8DD07CA4261D81D1008761F7 /* ViewModel */,
+				8DD07CA5261D81DC008761F7 /* View */,
 				8DD07C93261D81B0008761F7 /* HeroAnimationApp.swift */,
-				8DD07C95261D81B0008761F7 /* ContentView.swift */,
 				8DD07C97261D81B2008761F7 /* Assets.xcassets */,
 				8DD07C9C261D81B2008761F7 /* Info.plist */,
 				8DD07C99261D81B2008761F7 /* Preview Content */,
@@ -67,6 +73,30 @@
 				8DD07C9A261D81B2008761F7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8DD07CA3261D81C9008761F7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8DD07CA6261D824D008761F7 /* HSCardsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8DD07CA4261D81D1008761F7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8DD07CA5261D81DC008761F7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8DD07C95261D81B0008761F7 /* ContentView.swift */,
+				8DD07CAA261D82DC008761F7 /* HomeView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +169,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DD07C96261D81B0008761F7 /* ContentView.swift in Sources */,
+				8DD07CAB261D82DC008761F7 /* HomeView.swift in Sources */,
+				8DD07CA7261D824D008761F7 /* HSCardsModel.swift in Sources */,
 				8DD07C94261D81B0008761F7 /* HeroAnimationApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
