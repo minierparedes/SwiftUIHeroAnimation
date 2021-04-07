@@ -91,7 +91,7 @@ struct HomeView: View {
                         VStack(alignment: .center) {
                             HStack {
                                 Text(selected.name)
-                                    .font(hsFonts(Config.H3))
+                                    .font(hsFonts(Config.H2))
                                     .fontWeight(.bold)
                                     .foregroundColor(.yellow)
                             }
@@ -106,14 +106,45 @@ struct HomeView: View {
                             Text(selected.text)
                                 .font(.title3)
                                 .foregroundColor(.white)
-                            Text(selected.text)
-                                .font(.title3)
-                                .foregroundColor(.white)
-                            
-                            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.")
-                                .multilineTextAlignment(.leading)
-                                .padding(.top)
-                                .padding(.horizontal)
+                                .padding(.bottom, 5)
+                            VStack(alignment: .leading) {
+                                HStack {
+                                    Text("Type:")
+                                        .font(.headline)
+                                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                                        .foregroundColor(.yellow)
+                                    Text(selected.type)
+                                        .font(.subheadline)
+                                        .foregroundColor(.white)
+                                }
+                                HStack {
+                                    Text("Rarity:")
+                                        .font(.headline)
+                                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                                        .foregroundColor(.yellow)
+                                    Text(selected.rarity)
+                                        .font(.subheadline)
+                                        .foregroundColor(.white)
+                                }
+                                HStack {
+                                    Text("Set:")
+                                        .font(.headline)
+                                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                                        .foregroundColor(.yellow)
+                                    Text(selected.set)
+                                        .font(.subheadline)
+                                        .foregroundColor(.white)
+                                }
+                                HStack {
+                                    Text("Class:")
+                                        .font(.headline)
+                                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                                        .foregroundColor(.yellow)
+                                    Text(selected.classType)
+                                        .font(.subheadline)
+                                        .foregroundColor(.white)
+                                }
+                            }
                         }
                     }
                 }
