@@ -11,7 +11,9 @@ struct HomeView: View {
     var columns = Array(repeating: GridItem(.flexible(), spacing: 15), count: 2)
     @State var selected: HSCardModel = hsCardData[0]
     @State var show: Bool = false
+    @State var loadView: Bool = false
     @Namespace var namespace
+    
     var body: some View {
         VStack {
              ScrollView(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/, showsIndicators: false) {
@@ -40,6 +42,9 @@ struct HomeView: View {
                                     withAnimation(.spring()) {
                                         show.toggle()
                                         selected = card
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                                            loadView.toggle()
+                                        }
                                     }
                                 }
                                 .matchedGeometryEffect(id: card.id, in: namespace)
@@ -59,39 +64,52 @@ struct HomeView: View {
                             .resizable()
                             .frame(width: 190, height: 300)
                             .matchedGeometryEffect(id: selected.id, in: namespace)
-                        HStack {
-                            Spacer()
-                            Button(action: {
-                                withAnimation(.spring()) {
-                                    show.toggle()
+                       
+                        if loadView {
+                            HStack {
+                                Spacer()
+                                Button {
+                                    loadView.toggle()
+                                    withAnimation(.spring()) {
+                                        show.toggle()
+                                    }
+                                } label: {
+                                    Image(systemName: "xmark")
+                                        .foregroundColor(.white)
+                                        .padding()
+                                        .background(Color.black.opacity(0.5))
+                                        .clipShape(Circle())
                                 }
-                            }, label: {
-                                Image(systemName: "xmark")
-                                    .foregroundColor(.white)
-                                    .padding()
-                                    .background(Color.black.opacity(0.5))
-                                    .clipShape(Circle())
-                            })
-                            
-                            
-//                            Button {} label: {
-//                                Image(systemName: "suit.hear.fill")
-//                                    .foregroundColor(.red)
-//                                    .padding()
-//                                    .background(Color.white)
-//                            }
+                            }
+                            .padding(.top, 15)
+                            .padding(.horizontal)
                         }
-                        .padding(.top, 15)
-                        .padding(.horizontal)
                     }
                     
-                    Spacer()
+                    ScrollView(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/, showsIndicators: false) {
+                        VStack {
+                            HStack {
+                                Text(selected.title)
+                                    .font(.title)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.yellow)
+                            }
+                            .padding(.top)
+                            .padding(.horizontal)
+                            
+                            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.")
+                                .multilineTextAlignment(.leading)
+                                .padding(.top)
+                                .padding(.horizontalç)
+                        }
+                    }
                 }
                 .background(Color.white)
             }
             
         }
         .background(Color.white.edgesIgnoringSafeArea(.all))
+        .statusBar(hidden: show ? true : false)
     }
 }
 
