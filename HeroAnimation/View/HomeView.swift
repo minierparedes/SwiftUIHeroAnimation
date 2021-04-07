@@ -9,6 +9,9 @@ import SwiftUI
 
 struct HomeView: View {
     var columns = Array(repeating: GridItem(.flexible(), spacing: 15), count: 2)
+    @State var selected: HSCardModel = [0]
+    @State var show: Bool = false
+    @Namespace var namespace
     var body: some View {
         VStack {
              ScrollView(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/, showsIndicators: false) {
@@ -33,6 +36,13 @@ struct HomeView: View {
                             Image(card.img)
                                 .resizable()
                                 .frame(width: 95, height: 160)
+                                .onTapGesture {
+                                    withAnimation(.spring()) {
+                                        show.toggle()
+                                        selected = card
+                                    }
+                                }
+                                .matchedGeometryEffect(id: card.id, in: namespace)
                             Text(card.title)
                                 .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                         }
